@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <Navbar
-      logo={<span className="text-2xl font-bold text-primary">Sagar.dev</span>}
+      logo={<span className="text-2xl font-bold text-primary">RK</span>}
       items={menuItems}
       buttons={buttons}
       className="shadow-lg"
