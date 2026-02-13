@@ -1,20 +1,36 @@
-import { Globe } from '@/Components/ui/globe';
-import Image from 'next/image';
+import { Navbar } from "@/Components/Navbar";
+import { Globe } from "@/Components/ui/globe";
+import Image from "next/image";
 
 export default function Home() {
+  const menuItems = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    {
+      label: "Projects",
+      subItems: [
+        { label: "React", href: "/projects/react" },
+        { label: "Next.js", href: "/projects/nextjs" },
+      ],
+    },
+    { label: "Blog", href: "/blog" },
+  ];
+
+  const buttons = [
+    {
+      label: "Resume",
+      href: "/resume.pdf",
+      className: "bg-primary text-white",
+    },
+  ];
+
   return (
-    <div className='flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black'>
-      <main className='flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start'>
-        <Image
-          className='dark:invert'
-          src='/next.svg'
-          alt='Next.js logo'
-          width={100}
-          height={20}
-          priority
-        />
-        <Globe />
-      </main>
-    </div>
+    <Navbar
+      logo={<span className="text-2xl font-bold text-primary">Sagar.dev</span>}
+      items={menuItems}
+      buttons={buttons}
+      className="shadow-lg"
+      mobileClassName="bg-white"
+    />
   );
 }
