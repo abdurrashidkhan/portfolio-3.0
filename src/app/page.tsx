@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function Home() {
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
     {
       label: "Projects",
       subItems: [
@@ -13,7 +12,10 @@ export default function Home() {
         { label: "Next.js", href: "/projects/nextjs" },
       ],
     },
-    { label: "Blog", href: "/blog" },
+    { label: "Stack", href: "/stack " },
+    { label: "Experience", href: "/experience " },
+    { label: "Journal", href: "/journal" },
+    { label: "About", href: "/about" },
   ];
 
   const buttons = [
@@ -22,6 +24,11 @@ export default function Home() {
       href: "/resume.pdf",
       className: "bg-primary text-white",
     },
+    // {
+    //   label: "github",
+    //   href: "/resume.pdf",
+    //   className: "bg-primary text-white",
+    // },
   ];
 
   return (
